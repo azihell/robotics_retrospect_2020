@@ -499,7 +499,7 @@
             \vspace*{10mm}
         \fi
         \raggedright
-        \hspace*{5mm} Apresentada por: 
+        \hspace*{5mm} Apresentado por: 
         \hspace*{11mm} \@thesisauthor \\
         \hspace*{57mm} \@thesisauthorr \\
         \hspace*{57mm} \@thesisauthorrr \\

@@ -1,0 +1,129 @@
+\chapter{Desenvolvimento}
+\label{chap:desenvolvimento}
+
+Esse capítulo expõe os projetos realizados no programa de formação.
+
+
+%--------- NEW SECTION ----------------------
+\section{Desafio 1.0 - Detecção de objeto em simulação}
+\label{sec:des1}
+
+Como forma de introduzir os conceitos mais básicos da utilização do \textit{framework} \textit{ROS}, o Desafio 1.0 consistiu em fazer um veículo autônomo realizar a busca  por um objeto específico em um ambiente, em um ambiente simulado no \textit{Gazebo}. O veículo escolhido foi o ``Husky'', da \textit{Clearpath Robotics}, cujos pacotes \textit{ROS} já estavam previamente elaborados e tiveram que ser apenas ajustados. O ambiente da busca foi a área externa ao CIMATEC 4, que foi modelada no software \textit{Onshape}. O objeto a ser localizado foi uma esfera na cor amarela, e o programa para isso foi também concebido pelos estudantes.  A navegação e mapeamento foi feita utilizando-se pacotes do \textit{ROS}, como \textit{nav2d}\footnote{\url{https://github.com/skasperski/navigation_2d}} e \textit{gmapping}\footnote{\url{https://github.com/ros-perception/slam_gmapping}}. O objetivo foi fazer o veículo autônomo mapear o ambiente e navegar em busca da esfera. Ao ser detectada, o veículo procedeu com uma aproximação cautelosa até manter uma dada distância da esfera. Os conhecimentos deste desafio serviram como uma ampla base para a última etapa do processo de formação.
+
+
+%--------- NEW SECTION ----------------------
+\section{Desafio 2.0 - Manipulador \textit{RAJA}}
+\label{sec:des2}
+
+Nesta etapa, os estudantes, inicialmente, simularam um manipulador robótico com 5 graus de liberdade, utilizando novamente \textit{ROS, Gazebo} e \textit{MoveIt}, capaz de detectar marcadores fiduciais e se deslocar pelo espaço de modo a se aproximar destes marcadores. 
+Realizada a simulação com sucesso, partiu-se para a construção do manipulador em uma bancada no Laboratório de Robótica e Sistemas Autônomos, baseado nas dimensões, materiais e dispositivos simulados na etapa anterior. Novamente o \textit{MoveIt} foi a biblioteca responsável por realizar os cálculos cinemáticos necessários para enviar comandos às juntas do manipulador. O relatório resultante está no apêndice. A etapa de construção do manipulador foi precedida de um hiato decorrente da disseminação do COVID-19, que levou à realização do Desafio 2.5.
+
+O relatório gerado deste projeto encontra-se no Apêndice \ref{app:raja}
+
+
+\section{Desafio ``2.2'' - Manipulador \textit{El Borgson}}
+
+No inicio das construções dos manipuladores das equipes, ocorreu um problema de incompatibilidade dos motores que compunham as juntas dos manipuladores. Esses motores de modelos distintos não conseguiam se comunicar e com isso não conseguiam realizar o movimento corretamente. Dessa forma, concluiu-se que havia apenas motores com modelos semelhantes disponíveis para a concepção de dois manipuladores. Assim, a equipe do RAJA foi dissolvida e seus membros foram distribuídos para as outras duas equipes. O autor deste relatório foi relocado para a equipe ``Borgs'' posteriormente renomeada para ``El Borgson''
+Para este desafio foi feito uma construção real do manipulador modelado e simulado
+no Desafio 2.0. Os materiais utilizados neste desafio foram perfis de alumínio, motores Dynamixel, câmera RGB Basler, peças modeladas no software Onshape e impressas em plástico ABS numa impressora 3D. No Apêndice \ref{app:elborgson} está disponível o relatório gerado para esse projeto, para maiores detalhes.
+
+
+\section{Desafio 2.5 - Análise estatística R\&R do robô simulado DARwIn-OP}
+
+O desafio 2.5 foi realizado em equipe, pela mesma do desafio 2.2, no qual o robô programado
+foi o DARwIn-OP\footnote{\url{https://emanual.robotis.com/docs/en/platform/op/getting\_started/}}. O objetivo desse desafio foi o desenvolvimento, em ambiente
+simulado, de duas missões: 1) quatro destes robôs deviam andar de forma sincronizada de um ponto numa pista de corrida, e 2) uma corrida de revezamento
+Nesta corrida de revezamento, cada robô deveria se deslocar até o próximo e quando o alcançasse, ambos deveriam se deslocar juntos durante um intervalo de tempo, no lugar da troca real de um bastão.
+Sobre este projeto foi realizado um estudo que teve como objetivo analisar o sistema
+de medição dos dados coletados durante os testes realizados nas etapas: de marcha e
+de revezamento, utilizando o método de análise de variância (ANOVA). Nessa análise
+foi possível aplicar os conhecimentos obtidos em estatística, utilizando a ferramenta RStudio e a linguagem de programação R a fim de realizar o estudo estatístico desse projeto. O estudo foi R\&R (Repetibilidade e Reprodutibilidade), que consiste em testar o sistema quanto à sua capacidade de repetir um determinado evento.
+O resultado proveniente deste estudo está descrito no Apêndice \ref{app:darwin}.
+
+
+ \section{Estudo estatístico - ``DoE''}
+
+Uma vez que análises estatísticas são bastante relevantes em pesquisa científica, um dos projetos consistiu em realizar um \textit{DoE} ou \textit{Design of Experiments} (``Planejamento de Experimento''). Ele foi realizado em um modelo de ``helicóptero'' de papel. O propósito principal foi escolher parâmetros para alterar no helicóptero e a partir da repetição de experimentos controlados, determinar quais são os fatores que mais influenciam seu tempo de planagem. Durante o processo, foi utilizado um modelo de helicóptero em papel, medindo-se o tempo de planagem a partir de duas alturas diferentes. Além disso, foram adicionados adesivos e um clipe em pontos específicos da sua estrutura, a fim de verificar a influência da variação destes parâmetros no resultado final. O estudo proporcionou a aplicação do aprendizado adquirido ao uso da ferramenta e linguagem R usada para manipulação, análise e visualização de dados, e dos conhecimentos de Estatística. A análise utilizada neste experimento foi a análise de regressão. Os relatório gerado está no Apêndice \ref{app:doe}.
+
+\section{Desafio 3.0 - UGV ``CUCA''}
+
+Um \textit{UGV - Unmanned ground vehicle} ou ``veículo autônomo terrestre'' é uma plataforma móvel que se vale de rodas, esteiras ou outro dispositivo para locomoção em terra firme. Iniciando num período folclórico icônico que é o \textit{Halloween}, o projeto CUCA, fazendo uma alusão ao folclore nacional, consistiu em realizar a integração de um manipulador robótico, o ``TIMON-HM''\footnote{\url{https://github.com/Brazilian-Institute-of-Robotics/timon_hm_manipulator}} em uma plataforma móvel, o Warthog\footnote{\url{https://clearpathrobotics.com/warthog-unmanned-ground-vehicle-robot/}}, equipado com um LiDAR\footnote{\url{https://quanergy.com/what-is-lidar/}}, câmeras RGB\footnote{\url{http://www.nikondigital.org/articles/rgb_digital_camera_color.htm}} e navegador GPS\footnote{\url{https://en.wikipedia.org/wiki/Global_Positioning_System}}. No Apêndice \ref{app:cuca} encontra-se o relatório gerado por este projeto.
+
+%------------- picture sample ---------------
+% \begin{figure}
+%     \centering
+%     \subfigure[Figure A]{\label{fig:a}\includegraphics[width=60mm]{./lq}}
+%     \subfigure[Figure B]{\label{fig:b}\includegraphics[width=60mm]{./lq}}
+%     \subfigure[Figure C]{\label{fig:c}\includegraphics[width=\textwidth]{./lq}}
+%     \caption{Three simple graphs}
+%     \label{fig:three graphs}
+% \end{figure}
+%----------------------------------------------------------
+
+% \begin{figure}
+%     \centering
+%     \begin{subfigure}[b]{0.3\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{./lq}
+%         \caption{$y=x$}
+%         \label{fig:y equals x}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[b]{0.3\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{./lq}
+%         \caption{$y=3sinx$}
+%         \label{fig:three sin x}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[b]{0.3\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{./lq}
+%         \caption{$y=5/x$}
+%         \label{fig:five over x}
+%     \end{subfigure}
+%        \caption{Three simple graphs}
+%        \label{fig:three graphs}
+% \end{figure}
+
+
+%--------- table sample ---------------------
+% \label{sec:ass2}
+
+% \begin{table}[h]
+%     \begin{subtable}[h]{0.45\textwidth}
+%         \centering
+%         \begin{tabular}{l | l | l}
+%         Day & Max Temp & Min Temp \\
+%         \hline \hline
+%         Mon & 20 & 13\\
+%         Tue & 22 & 14\\
+%         Wed & 23 & 12\\
+%         Thurs & 25 & 13\\
+%         Fri & 18 & 7\\
+%         Sat & 15 & 13\\
+%         Sun & 20 & 13
+%        \end{tabular}
+%        \caption{First Week}
+%        \label{tab:week1}
+%     \end{subtable}
+%     \hfill
+%     \begin{subtable}[h]{0.45\textwidth}
+%         \centering
+%         \begin{tabular}{l | l | l}
+%         Day & Max Temp & Min Temp \\
+%         \hline \hline
+%         Mon & 17 & 11\\
+%         Tue & 16 & 10\\
+%         Wed & 14 & 8\\
+%         Thurs & 12 & 5\\
+%         Fri & 15 & 7\\
+%         Sat & 16 & 12\\
+%         Sun & 15 & 9
+%         \end{tabular}
+%         \caption{Second Week}
+%         \label{tab:week2}
+%      \end{subtable}
+%      \caption{Max and min temps recorded in the first two weeks of July}
+%      \label{tab:temps}
+% \end{table}

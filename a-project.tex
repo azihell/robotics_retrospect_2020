@@ -113,6 +113,7 @@
 \usepackage{lipsum}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{pdfpages}
 %
 \makeindex 
 \setlength{\LTcapwidth}{\textwidth}
@@ -141,11 +142,11 @@
 \begin{document}
 % Definição do título da página
     \university{Centro Universitário SENAI CIMATEC}
-	%\faculty{Programa de...}
+	% \faculty{}
 	%\school{Escola de...}
 % 
-    %\course{Engenharia Elétrica}
-    \typework{Fundamentos de Robótica Móvel}
+    \course{Pós-graduação em Robótica e Sistemas Autônomos}
+    % \typework{Fundamentos de Robótica Móvel}
 % 
 	%\course{Mestrado em Modelagem Computacional e Tecnologia Industrial}
 	%\typework{Disserta\c{c}\~ao de mestrado}
@@ -157,16 +158,16 @@
 %
 % -------------------------------------------------------------------------------
 % Informações gerais
-    \thesistitle{Relatório Final do Programa de Formação em
+    \thesistitle{Relatório final do programa de formação em
     Robótica e Sistemas Autônomos
     }
     \hidevolume
     \thesisvolume{Volume 1 of 1}
     \thesisauthor{Aziel Freitas}
-    % \thesisauthorr{John Nash}
-    % \thesisauthorrr{James Clerk Maxwell}
-    % \thesisauthorrrr{Nikola Tesla}
-    % \thesisauthorrrrr{Sir Isaac Newton}
+    \thesisauthorr{John Nash}
+    \thesisauthorrr{James Clerk Maxwell}
+    \thesisauthorrrr{Nikola Tesla}
+    \thesisauthorrrrr{Sir Isaac Newton}
     %\thesisadvisor{Prof. Marco Reis, M.Eng.}
     %\hidecoadvisor
     %\thesiscoadvisor{Marco Reis}
@@ -181,7 +182,7 @@
     %\include{Others/NotaEstilo}
     %\include{Others/FolhaAssinaturas}
     %\include{Others/dedicatoria}
-    %\include{Others/agradecimentos}
+    \include{Others/agradecimentos}
 %
 % ----------------------------------------------------------------------------
 % Resumo/abstract, sumário e siglas
@@ -200,18 +201,50 @@
 % Include thesis chapters
     \parskip=\baselineskip
     \include{Chapters/introducao}
-    \include{Chapters/fundamentos}
+    \include{Chapters/desenvolvimento}
     \include{Chapters/metodos}
     \include{Chapters/resultados}
     \include{Chapters/conclusao}
     % include more chapters ...
-%
+
+% Deactivate page numbering since the appendices are numbered
+\pagenumbering{gobble}
+
 % ----------------------------------------------------------------------------
 % Include thesis appendices
     \begin{thesisappendices}
-        \include{Appendices/diagmec}
-        \include{Appendices/diagele}
-        \include{Appendices/logbook}
+        \chapter{Manipulador robótico ``RAJA''}
+        \label{app:raja}
+        
+        % \includepdf[pages={1-66}, pagecommand={}]{Appendices/A-RAJA.pdf}
+
+        \chapter{Manipulador robótico ``El Borgson''}
+        \label{app:elborgson}
+        % \includepdf[pages={1-161}, pagecommand={}]{Appendices/B-elborgson.pdf}
+
+        \chapter{Corrida de revezamento: DARwIn-OP}
+        \label{app:darwin}
+        % \includepdf[pages={-}, pagecommand={}]{Appendices/C-RAJA-stats2.pdf}
+
+        \chapter{Projeto de experimento}
+        \label{app:doe}
+        % \includepdf[pages={-}, pagecommand={}]{Appendices/D-doe.pdf}
+
+        \chapter{UGV CUCA}
+        \label{app:cuca}
+        % \includepdf[pages={-}, pagecommand={}]{Appendices/E-orbslam.pdf}
+
+        \chapter{Manipulador RAJA - Artigo SAPCT}
+        \label{app:rajapaper}
+        % \includepdf[pages={-}, pagecommand={}]{Appendices/F-artigoRAJA.pdf}
+
+        \chapter{Projeto TRIS - Artigo SIINTEC}
+        \label{app:trispaper}
+        % \includepdf[pages={-}, pagecommand={}]{Appendices/G-artigoTRIS.pdf}
+        
+        \chapter{Projeto TRIS: Certificado de participação SIINTEC}
+        \label{app:certif}
+        \includepdf[pages={-}, scale=0.85]{Appendices/G-certificado.pdf}
     \end{thesisappendices}
 %
 % ----------------------------------------------------------------------------
