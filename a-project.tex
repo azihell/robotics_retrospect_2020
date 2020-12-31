@@ -163,11 +163,11 @@
     }
     \hidevolume
     \thesisvolume{Volume 1 of 1}
-    \thesisauthor{Aziel Freitas}
-    \thesisauthorr{John Nash}
-    \thesisauthorrr{James Clerk Maxwell}
-    \thesisauthorrrr{Nikola Tesla}
-    \thesisauthorrrrr{Sir Isaac Newton}
+    \thesisauthor{Aziel Martins de Freitas Júnior}
+    % \thesisauthorr{John Nash}
+    % \thesisauthorrr{James Clerk Maxwell}
+    % \thesisauthorrrr{Nikola Tesla}
+    % \thesisauthorrrrr{Sir Isaac Newton}
     %\thesisadvisor{Prof. Marco Reis, M.Eng.}
     %\hidecoadvisor
     %\thesiscoadvisor{Marco Reis}
@@ -207,7 +207,7 @@
     \include{Chapters/conclusao}
     % include more chapters ...
 
-% Deactivate page numbering since the appendices are numbered
+% Deactivate page numbering since the appendices are already numbered
 \pagenumbering{gobble}
 
 % ----------------------------------------------------------------------------
@@ -216,42 +216,50 @@
         \chapter{Manipulador robótico ``RAJA''}
         \label{app:raja}
         
-        % \includepdf[pages={1-66}, pagecommand={}]{Appendices/A-RAJA.pdf}
+        \includepdf[pages={-}]{Appendices/A-RAJA.pdf}
 
         \chapter{Manipulador robótico ``El Borgson''}
         \label{app:elborgson}
-        % \includepdf[pages={1-161}, pagecommand={}]{Appendices/B-elborgson.pdf}
+        \includepdf[pages={-}]{Appendices/B-elborgson.pdf}
 
         \chapter{Corrida de revezamento: DARwIn-OP}
         \label{app:darwin}
-        % \includepdf[pages={-}, pagecommand={}]{Appendices/C-RAJA-stats2.pdf}
+        \includepdf[pages={-}]{Appendices/C-RAJA-stats2.pdf}
 
         \chapter{Projeto de experimento}
         \label{app:doe}
-        % \includepdf[pages={-}, pagecommand={}]{Appendices/D-doe.pdf}
+        \includepdf[pages={-}]{Appendices/D-doe.pdf}
 
         \chapter{UGV CUCA}
         \label{app:cuca}
-        % \includepdf[pages={-}, pagecommand={}]{Appendices/E-orbslam.pdf}
+        \includepdf[pages={-}]{Appendices/E-orbslam.pdf}
 
-        \chapter{Manipulador RAJA - Artigo SAPCT}
+        \chapter{Artigo do manipulador RAJA - V SAPCT}
         \label{app:rajapaper}
-        % \includepdf[pages={-}, pagecommand={}]{Appendices/F-artigoRAJA.pdf}
+        \includepdf[pages={-}]{Appendices/F-artigoRAJA.pdf}
+
+        \chapter{V SAPCT - certificado de participação }
+        \label{app:sapctpart}
+        \includepdf[pages={-}]{Appendices/cert-part-V-SAPCT.pdf}
+
+        \chapter{V SAPCT - certificado do resumo expandido }
+        \label{app:sapctresumo}
+        \includepdf[pages={-}]{Appendices/cert-resumo-V-SAPCT.pdf}
 
         \chapter{Projeto TRIS - Artigo SIINTEC}
         \label{app:trispaper}
-        % \includepdf[pages={-}, pagecommand={}]{Appendices/G-artigoTRIS.pdf}
+        \includepdf[pages={-}]{Appendices/G-artigoTRIS.pdf}
         
         \chapter{Projeto TRIS: Certificado de participação SIINTEC}
         \label{app:certif}
-        \includepdf[pages={-}, scale=0.85]{Appendices/G-certificado.pdf}
+        \includepdf[pages={-}, scale=0.9]{Appendices/G-certificado.pdf}
     \end{thesisappendices}
 %
 % ----------------------------------------------------------------------------
 % Configurar as referencias bibliograficas
-	\renewcommand\bibname{Referências}
-    \addcontentsline{toc}{chapter}{Referências}
-    \bibliography{References/referencias}
+	% \renewcommand\bibname{Referências}
+    % \addcontentsline{toc}{chapter}{Referências}
+    % \bibliography{References/referencias}
 %
 % ----------------------------------------------------------------------------
 % Finishing him
