@@ -532,21 +532,21 @@
 \@thesisauthor
 }
 
-\newenvironment{theauthorr}{%
-\@thesisauthorr
-}
+% \newenvironment{theauthorr}{%
+% \@thesisauthorr
+% }
 
-\newenvironment{theauthorrr}{%
-\@thesisauthorrr
-}
+% \newenvironment{theauthorrr}{%
+% \@thesisauthorrr
+% }
 
-\newenvironment{theauthorrrr}{%
-\@thesisauthorrrr
-}
+% \newenvironment{theauthorrrr}{%
+% \@thesisauthorrrr
+% }
 
-\newenvironment{theauthorrrrr}{%
-\@thesisauthorrrrr
-}
+% \newenvironment{theauthorrrrr}{%
+% \@thesisauthorrrrr
+% }
 
 \newenvironment{thetitle}{%
 \@thesistitle
@@ -690,14 +690,14 @@
     \ifpdf
         \pdfbookmark[1]{Sumário}{toc} \tableofcontents
         \newpage
-        \pdfbookmark[1]{Lista de Tabelas}{lot}\listoftables
-        \newpage
-        \pdfbookmark[1]{Lista de Figuras}{lof} \listoffigures
-        \newpage
+        % \pdfbookmark[1]{Lista de Tabelas}{lot}\listoftables
+        % \newpage
+        % \pdfbookmark[1]{Lista de Figuras}{lof} \listoffigures
+        % \newpage
     \else
         \tableofcontents
-        \listoftables
-        \listoffigures
+        % \listoftables
+        % \listoffigures
     \fi
 }
 
